@@ -1,7 +1,7 @@
-def PROJECT_NAME = "Slot-Vikings"
+def PROJECT_NAME = "Slot-CrazyMonkey"
 def UNITY_VERSION = "2022.3.48f1"
 def UNITY_INSTALLATION = "C:\\Program Files\\Unity\\Hub\\Editor\\${UNITY_VERSION}\\Editor\\Unity.exe"
-def REPO_URL = "https://github.com/Prathm0025/Slot-Vikings.git"
+def REPO_URL = "https://github.com/Prathm0025/Slot-CrazyMonkey.git"
 
 pipeline {
     agent {
@@ -15,7 +15,7 @@ pipeline {
     environment {
         PROJECT_PATH = "C:\\${PROJECT_NAME}" 
         Token = credentials('GITHUB_Prathm0025') 
-        S3_BUCKET = "vikingsbucket" // Define your bucket name here
+        S3_BUCKET = "dingcrazymonkey" // Define your bucket name here
     }
 
     stages {
@@ -52,8 +52,8 @@ pipeline {
                             git add Builds
                             git commit -m "Add build"
                             git branch main
-                            git remote set-url origin https://github.com/Prathm0025/Slot-Vikings-dev.git
-                            git push https://${Token}@github.com/Prathm0025/Slot-Vikings-dev.git main --force
+                            git remote set-url origin https://github.com/Prathm0025/Slot-CrazyMonkey.git
+                            git push https://${Token}@github.com/Prathm0025/Slot-CrazyMonkey.git develop --force
                         '''
                     }
                 }
