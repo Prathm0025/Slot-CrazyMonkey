@@ -17,7 +17,7 @@ public class BuildScript
             scenes = GetEnabledScenes(),
             locationPathName = path,
             target = BuildTarget.WebGL,
-            options = BuildOptions.Development   // BuildOptions.None
+            options = BuildOptions.None
         };
 
         BuildPipeline.BuildPlayer(buildPlayerOptions);
